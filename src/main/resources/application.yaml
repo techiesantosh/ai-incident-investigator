@@ -1,0 +1,21 @@
+spring:
+  ai:
+    openai:
+      api-key: example
+      base-url: https://openai.generative.engine.example.com/v1
+      chat:
+        model: openai.gpt-5-mini
+      embedding:
+        model: amazon.titan-embed-text-v1
+  datasource:
+    url: jdbc:postgresql://${PG_HOST:localhost}:${PG_PORT:5432}/${PG_DB:postgres}
+    username: ${PG_USER:postgres}
+    password: ${PG_PASSWORD:147896}
+
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
